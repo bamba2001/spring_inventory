@@ -29,7 +29,7 @@
 
         <div class="container">
             <c:if test="${user_id == null}">
-                <% response.sendRedirect("http://localhost:8084/spring_inventory_jdbc/home");%>
+                <% response.sendRedirect("http://localhost:8080/spring_inventory_jdbc/home");%>
             </c:if>
             <div class="col-md-12 header">
                 <h1 align="center"><a href="<%= request.getContextPath()%>/">Gestion de stock</a></h1>
@@ -70,7 +70,7 @@
                 <c:if test="${sm != null}">
                     <div class="alert alert-success alert-dismissable fade in">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Success!</strong> ${sm}
+                        <strong>Succès!</strong> ${sm}
                     </div>
 
                 </c:if>

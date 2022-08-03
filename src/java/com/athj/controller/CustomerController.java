@@ -33,9 +33,9 @@ public class CustomerController {
         customer.setPhone(request.getParameter("phone"));
         boolean status = customerDao.saveCustomer(customer);
         if (status) {
-            modelMap.addAttribute("sm", "Customer Info Saved Successfully");
+            modelMap.addAttribute("sm", "Informations clients enregistrées avec succès ");
         } else {
-            modelMap.addAttribute("em", "Customer Info Not Saved");
+            modelMap.addAttribute("em", "Informations clients non enregistrées ");
         }
         return "redirect:/customer";
     }
@@ -56,9 +56,9 @@ public class CustomerController {
         customer.setPhone(request.getParameter("phone"));
         boolean status = customerDao.updateCustomer(customer);
         if (status) {
-            modelMap.addAttribute("sm", "Customer Info Update Successfully");
+            modelMap.addAttribute("sm", "Informations clients mises à jour avec succès");
         } else {
-            modelMap.addAttribute("em", "Customer Info Not Update");
+            modelMap.addAttribute("em", "Informations clients non mises à jour ");
         }
         return "redirect:/customer";
     }
@@ -67,9 +67,9 @@ public class CustomerController {
     public String deleteCustomer(@PathVariable("id") String id, ModelMap modelMap) {
         boolean status = customerDao.deleteCustomer(Integer.parseInt(id));
         if (status) {
-            modelMap.addAttribute("sm", "Customer Info Deleted Successfully");
+            modelMap.addAttribute("sm", "Informations clients supprimées avec succès");
         } else {
-            modelMap.addAttribute("em", "Customer Info Not Deleted");
+            modelMap.addAttribute("em", "Informations clients non supprimées");
         }
         return "redirect:/customer";
     }

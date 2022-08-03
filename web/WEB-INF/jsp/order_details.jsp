@@ -31,7 +31,7 @@
     </head>
     <body ng-controller="orderDetailsChartCtrl">
         <c:if test="${user_id == null}">
-            <% response.sendRedirect("http://localhost:8084/spring_inventory_jdbc/home");%>
+            <% response.sendRedirect("http://localhost:8080/spring_inventory_jdbc/home");%>
         </c:if>
         <div class="container">
 

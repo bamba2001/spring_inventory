@@ -35,9 +35,9 @@ public class ProductController {
         product.setQty(Integer.parseInt(request.getParameter("qty")));
         boolean status = productDao.saveProduct(product);
         if (status) {
-            modelMap.addAttribute("sm", "Product Info Saved Successfully");
+            modelMap.addAttribute("sm", "Informations produits enregistrées avec succès");
         } else {
-            modelMap.addAttribute("em", "Product Info Not Saved");
+            modelMap.addAttribute("em", "Informations produits non enregistrées ");
         }
         return "redirect:/product";
     }
@@ -59,9 +59,9 @@ public class ProductController {
         product.setQty(Integer.parseInt(request.getParameter("qty")));
         boolean status = productDao.updateProduct(product);
         if (status) {
-            modelMap.addAttribute("sm", "Product Info Update Successfully");
+            modelMap.addAttribute("sm", "Informations produits mises à jour avec succès ");
         } else {
-            modelMap.addAttribute("em", "Product Info Not Update");
+            modelMap.addAttribute("em", "Informations produits non mises à jour ");
         }
         return "redirect:/product";
     }
@@ -70,9 +70,9 @@ public class ProductController {
     public String deleteProduct(@PathVariable("id") String id, ModelMap modelMap) {
         boolean status = productDao.deleteProduct(Integer.parseInt(id));
         if (status) {
-            modelMap.addAttribute("sm", "Product Info Deleted Successfully");
+            modelMap.addAttribute("sm", "Informations produits supprimées avec succès");
         } else {
-            modelMap.addAttribute("em", "Product Info Not Delete");
+            modelMap.addAttribute("em", "Informations produits non supprimées");
         }
         return "redirect:/product";
     }
